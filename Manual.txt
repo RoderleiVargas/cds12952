@@ -1,0 +1,97 @@
+﻿Tipo de Variáveis
+
+%d = inteiro = int
+%f = numero com virgula - float
+%c = unico caracter = char
+%s = string caracter = char colocar o tamanho entre colchetes
+& = utilizado somente quando são nros ou um unico caracter
+
+----------------- EXEMPLO DE INTEIRO
+
+#include <stdio.h>
+
+int codigo;
+
+int main()
+{
+    printf("\nDigite o codigo: ");
+    scanf("%d", &codigo);
+
+    return 0;
+}
+
+----------------- EXEMPLO DE FLOAT
+
+#include <stdio.h>
+
+float preco;
+
+int main()
+{
+    printf("\nDigite o preco: ");
+    scanf("%f", &pareco);
+
+    return 0;
+}
+----------------- EXEMPLO DE CHAR
+
+#include <stdio.h>
+
+char codigo;
+
+int main()
+{
+    printf("\nDigite o codigo: ");
+    scanf("%c", &codigo);
+    printf("O codigo é %c", codigo);
+    
+    return 0;
+}
+
+
+----------------- EXEMPLO DE STRING
+
+#include <stdio.h>
+
+char nome[50];
+
+int main()
+{
+    printf("\nDigite seu nome: ");
+    scanf("%s", nome);
+
+    return 0;
+}
+
+
+------------------ Exercio de treino
+
+Recebe o nome + peso
+	Se o peso for > 90 imprime (vai para academia)
+	Se o peso for < 90 imprime voce esta em boa forma
+
+#include <stdio.h>
+
+char nome[100];
+float peso=0;
+
+int main()
+{
+    printf("\nDigite seu nome: ");
+    scanf("%s", nome);
+    
+    printf("\nDigite seu peso: ");
+    scanf("%f", &peso);
+    
+    if (peso > 90)
+    {
+        puts("Vai para Acedemia");
+    }
+        else
+            {
+                puts("Parabens vc está em forma");
+            }
+    
+return 0;
+}
+

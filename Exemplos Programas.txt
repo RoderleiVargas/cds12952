@@ -1,0 +1,346 @@
+#include <stdio.h>
+
+int main()
+{
+    int idade;
+    char inicial;
+        printf("Digite sua Inicial: ");
+        scanf("%c", &inicial);
+        
+        printf("Digite sua Idade: ");
+        scanf("%d", &idade);
+        
+        printf("\nInicial: %c\tidade: %d.\n" , inicial, idade);
+    return 0;
+}
+
+
+  
+#include <stdio.h>
+
+int main()
+{
+    int unidades = 4;
+    float preco = 5.5;
+    float total = unidades * preco;
+    printf("Total = %f\n", total);
+    printf("Total = %f\n", unidades * preco);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    float n1, n2, n3, n4, media;
+    
+    printf("\nNota 1: ");
+    scanf("%f", &n1);
+    
+    printf("\nNota 2: ");
+    scanf("%f", &n2);
+    
+    printf("\nNota 3: ");
+    scanf("%f", &n3);
+    
+    printf("\nNota 4: ");
+    scanf("%f", &n4);
+    
+    media = (n1 + n2 + n3 + n4) /4;
+    
+    if(media >= 7)
+    {
+        printf("\nAluno Aprovado.");
+    }
+    
+    if(media < 7)
+    {
+        printf("\nAluno Reprovado.");
+    }
+    
+    printf("\n\nMedia Aritmetica: %f.", media);
+    
+    return 0;
+}
+
+***********************/
+
+#include <stdio.h>
+#define PI 3.1415
+/* 
+    Programa de exemplo 
+    Comece um comentário grande com /* e termina com */
+*/
+
+int main()
+{
+    const float pi = 3.1415;
+    printf ("PI = %f\n", PI); // /n é para pular linha /t é uma tabulação
+    printf ("PI = %f", pi);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+float cotacao_dolar, valor_em_dolares, conversao;
+
+int main()
+{
+    printf("\nDigite a cotação do Dolar: ");
+    scanf("%f", &cotacao_dolar);
+    
+    printf("\nDigite o valor em dolcares: ");
+    scanf("%f", &valor_em_dolares);
+    
+    conversao = cotacao_dolar * valor_em_dolares;
+    
+    printf ("\nO valor convertido é: %f", conversao);
+    
+    return 0;
+}
+
+}
+
+
+#include <stdio.h>
+
+float n1, n2, n3, n4, q1, q2, q3, q4, soma;
+
+int main()
+{
+    printf("\nDigite o primeiro nro: ");
+    scanf("%f", &n1);
+    
+    printf("\nDigite o segundo nro: ");
+    scanf("%f", &n2);
+    
+    printf("\nDigite o terceiro nro: ");
+    scanf("%f", &n3);
+    
+    printf("\nDigite o quarto nro: ");
+    scanf("%f", &n4);
+    
+    q1 = n1 * n1;
+    
+    q2 = n2 * n2;
+    
+    q3 = n3 * n3;
+    
+    q4 = n4 * n4;
+    
+    soma = q1 + q2 + q3 + q4;
+    
+    printf("\nA soma total é : %f ", soma);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+char nome_vendedor[50], codigo_peca[10];
+
+float preco_unitario_peca, qtda_peca, comissao;
+
+    printf("\nDigite o nome do vendedor: ");
+    scanf ("%s", nome_vendedor);
+    
+    printf("\nDigite o codigo da peça: ");
+    scanf("%s", codigo_peca);
+    
+    printf("\nDigite o preço unitário da peça: ");
+    scanf("%f", &preco_unitario_peca);
+    
+    printf("\nDigite a quantidade de peças: ");
+    scanf("%f", &qtda_peca);
+    
+    comissao = (preco_unitario_peca * qtda_peca) * 5 /100;
+    
+    printf("\nA comissão é : %f ", comissao);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+char nome[50];
+int idade;
+
+int main()
+{
+    printf("\nDigite seu nome: ");
+    scanf("%s", nome);
+    
+    printf("\nDigite sua idade: ");
+    scanf("%d", &idade);
+    
+    printf ("\nSeu nome é %s e sua idade é %d anos", nome, idade);
+    
+    return 0;
+}
+
+Para descobrir se um nro é par ou impar
+
+int a;
+scanf("%d , &a);
+if (a % 2 == 0)
+{
+	puts("o nro é par");
+}
+else
+{
+	puts("o nro é impar");
+}
+
+SWITCH
+
+int opcao;
+puts("1. Recarregar");
+puts("2. Consultar saldo");
+puts("9. Falar com atendente");
+scanf(%d, &opcao);
+
+switch(opcao)
+{
+	case 1;
+		puts("Recarregar");
+		// codigo para recarregar o celular
+		break;
+	case 2;
+		puts("consultar saldo");
+		// codigo para consultar o sadlo
+		break;
+	case 3;
+		puts("falar com atendente");
+		// codigo para falar com atendente
+		break;
+}
+
+
+#include <stdio.h>
+
+float peso, excesso = 0 , multa = 0;
+
+int main()
+{
+    printf("\nDigite o peso: ");
+    scanf("%f", &peso);
+
+    if(peso > 50) 
+    {
+        excesso = peso -50;
+        multa = excesso * 4;
+    }
+printf("Peso: %2.2f\n", peso);
+printf("Excesso:%2.2f\n", excesso);
+printf("Multa: %2.2f\n", multa);
+
+return 0;
+    
+}
+
+
+#include <stdio.h>
+
+int codigo_funcionario;
+float numero_horas, salario, extra, salario_total;
+
+int main()
+{
+    printf("\nDigite o codigo do funcionário: ");
+    scanf("%d", &codigo_funcionario);
+    
+    printf("\nDigite o número de horas: ");
+    scanf("%f", &numero_horas);
+    
+    salario = numero_horas * 10;
+
+    if(numero_horas > 50) 
+    {
+        extra = (numero_horas - 50) * 20;
+        salario_total = salario + extra;
+        
+    }
+printf("Salario: %2.2f\n", salario);
+printf("Salario Excedente:%2.2f\n", extra);
+printf("Salario Total: %2.2f\n", salario_total);
+
+return 0;
+    
+}
+
+------------
+
+#include <stdio.h>
+
+int n1, n2, n3, n4, q1, q2, q3, q4;
+
+int main()
+{
+    printf("\nDigite o 1º nro: ");
+    scanf("%d", &n1);
+    
+    printf("\nDigite o 2º nro: ");
+    scanf("%d", &n2);
+    
+    printf("\nDigite o 3º nro: ");
+    scanf("%d", &n3);
+    
+    printf("\nDigite o 4º nro: ");
+    scanf("%d", &n4);
+    
+    q1 = n1 * n1;
+    q2 = n2 * n2;
+    q3 = n3 * n3;
+    q4 = n4 * n4;
+    
+    if(q3 >= 1000)
+    {
+        printf("\nO valor de q3 é: %d", q3);
+        return 0;
+    }
+        
+printf ("\nO valor de n1 é: %d e o quadrado é %d", n1, q1);
+printf ("\nO valor de n2 é: %d e o quadrado é %d", n2, q2);
+printf ("\nO valor de n2 é: %d e o quadrado é %d", n3, q3);
+printf ("\nO valor de n2 é: %d e o quadrado é %d", n3, q3);
+
+return 0;
+}
+
+--------------------
+
+
+#include <stdio.h>
+
+int numero = 0;
+
+int main()
+{
+printf("\nDigite o nro: ");
+scanf("%d", &numero);
+
+if (numero % 2 == 0)
+{
+	puts("o nro é par");
+}
+else
+{
+	puts("o nro é impar");
+}
+
+if (numero > 0)
+{
+	puts("o nro é positivo");
+}
+else
+{
+	puts("o nro é negativo");
+}
+
+}
+
