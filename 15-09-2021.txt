@@ -1,0 +1,189 @@
+Exercicio 3
+
+#include <stdio.h>
+
+int main()
+{
+int i, nro, soma=0, produto =  1;
+
+printf("\n Digite um número natural: ");
+scanf("%d", &nro);
+
+    for (i = 1; i <= nro; i++)
+    {
+        soma += i;
+        produto *= i;
+    }
+    printf("\nSoma = %d", soma);
+    printf("\nProduto = %d", produto);
+    
+    return 0;
+}
+
+Exercicio 4
+
+# include <stdio.h>
+
+int main()
+{
+    int n, i, j;
+
+    printf("Digite o número de ramos: ");
+    scanf("%d", &n);
+
+    for(i = 0; i <= n; i++)
+    {
+        for(j = 0; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+Exercicio 5
+
+# include <stdio.h>
+
+int main()
+{
+    int n, i, j;
+    char letra = 'A';
+    
+    printf("Digite o número de ramos: ");
+    scanf("%d", &n);
+
+    for(i = 0; i <= n; i++)
+    {
+        for(j = 0; j <= i; j++)
+        {
+            printf("%c", letra);
+        }
+        letra ++;
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Exercício Extra 1
+
+# include <stdio.h>
+
+int main()
+{
+
+int i, nroseq, n1, n2, soma;
+
+    printf("\n Digite um número positivo: ");
+    scanf("%d", &nroseq);
+    n1 = 0;
+    n2 = 1;
+    i = 0;
+    while (i < nroseq) 
+    {
+        printf("%d ", n1);
+        soma = n1 + n2;
+        n1 = n2;
+        n2 = soma;
+        i++;
+    }
+    
+    return 0;
+}
+
+--------------Exercicio com problema--------------
+
+#include <stdio.h>
+
+int over_the_road(int n_casa, int comprimento){ 
+int esquerda=1,direita, x=(comprimento * 2);
+
+    for (esquerda = 1; esquerda <= n_casa; esquerda+2) 
+    {
+        
+        if (esquerda == x)
+            return esquerda;
+        
+        else if(esquerda == x)
+			return direita;
+    esquerda =+2;
+    direita =-2;
+    }
+}
+int main()
+{
+	int comprimento, n_casa;
+	printf("Comprimento da rua: ");
+	scanf("%d", &comprimento);
+
+	printf("\nNúmero da sua casa: ");
+	scanf("%d", &n_casa);
+
+	printf("\n\nO número da casa em frente a sua é %d.\n\n", over_the_road(n_casa, comprimento));
+	return 0;
+}
+
+
+// faz esse Fazer um programa para encontrar todos os números pares entre 1 e 100.
+
+#include <stdio.h>
+
+int i=0;
+
+int main()
+{
+for (i = 0; i <= 100; i++) 
+{
+    if (i % 2 == 0)
+        printf("%d ", i);
+}
+
+    return 0;
+}
+
+// Leia várias idades e calcule a média entre as idades 
+
+#include <stdio.h>
+
+int main()
+{
+int i=0, qtd_idade, idade, media_idades;
+
+printf("\n Quantas Idades vc quer digitar: ");
+scanf("%d", &qtd_idade);
+
+for (i = 0; i < qtd_idade; i++) 
+{
+    printf("\n Digite a Idade : ");
+    scanf("%d", &idade);
+    media_idades = media_idades + idade;
+}
+
+printf("A média de idades é: %d", media_idades/qtd_idade);
+
+return 0;
+}
+
+// Utilizando a estrutura de repetição for, faça um programa em C que receba 5 números e conte quantos 
+// deles estão no intervalo [10,20] e quantos deles estão fora do intervalo, escrevendo estas informações.
+
+#include <stdio.h>
+int main()
+{
+int nro, i, contador;
+
+for (i = 0; i < 5; i++)
+{
+    printf("Digite nro ");
+    scanf("%d", &nro);
+    
+    if (nro >= 10 && nro <= 20)
+        contador = contador + 1;
+}
+printf("Voce digitou %d nros entre 10 e 20", contador);
+return 0;
+}
