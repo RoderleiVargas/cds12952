@@ -1,0 +1,134 @@
+--------------- EXERCICIO 1
+
+Crie um programa em C que leia duas strings (uma para o nome, e outra para o sobrenome de uma pessoa) e concatene essas duas strings em uma terceira variável e exiba o resultado na tela.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+    char nome[100], sobrenome[100], nome_completo[200];
+    
+    printf("\nDigite seu nome: ");
+    scanf("%s", nome);
+    // Quando é uma string é utilizado %s para ler a mesma
+    
+    printf("\nDigite seu sobrenome: ");
+    scanf("%s", sobrenome);
+    // Quando é uma string é utilizado %s para ler a mesma
+    
+    strcpy(nome_completo, nome);   
+    strcat(nome_completo, " "); 
+    strcat(nome_completo, sobrenome);           
+
+    puts(nome_completo);
+    
+    return 0;
+}
+
+----------------- EXERCICIO 2
+
+Desenvolva um programa em C que leia uma string do usuário e conte a quantidade de vogais e a quantidade de consoantes dessa string.
+
+**Dica:** Para simplificar o exercício, você pode considerar que todo caractere que não é uma vogal é uma consoante. Se quiser realmente testar se o caracter é uma consoante, lembre-se da tabela ASCII.
+
+**Dica 2:** Lembre-se que maiúsculas e minúsculas são diferentes em C: `'A' ? 'a'`.
+
+**Dica 3:** Lembre-se dos operadores lógicos: E (`&&`) e OU (`||`).
+
+Exemplo do programa executando:
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+    char string[100]; 
+    int i, vogais=0, consoantes=0;
+    
+    printf("\nDigite uma string: ");
+    scanf("%s", string);
+    
+    for(i = 0; string[i] != '\0'; i++) 
+    {       
+    
+        if (string[i] =='a' || string[i] =='A' || string[i] =='e' || string[i] =='E' || string[i] =='i' || string[i] =='I' || string[i] =='o' || string[i] =='O' || string[i] =='u' || string[i] =='U')
+        {
+            vogais = vogais + 1;
+            
+        }
+        else
+        {
+            consoantes = consoantes + 1;
+        }
+        
+        
+    }
+    
+    printf("\nA Quantiade de Vogais é: %d", vogais);
+    printf("\nA Quantiade de Consoantes é: %d", consoantes);
+        
+    return 0;
+}
+
+------------------- EXERCICIO 3
+
+Escreva um programa em C que leia uma string do usuário e diga se essa string está toda em letras maiúsculas ou não. Para esse exercício, considere uma string toda em maiúsculo quando não há nela letras minúsculas, ou seja, considere números, espaços e outros caracteres como letras maiúsculas.
+
+**Dica:** Lembre-se da tabela ASCII.
+
+Exemplo do programa executando:
+
+```
+Digite uma string: Teste
+
+A string NÃO está toda em letras maiúsculas.
+```
+
+```
+Digite uma string: TESTE2
+
+A string ESTÁ toda em letras maiúsculas.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+    char string[100]; 
+    int i, maiusculas=0, minusculas=0;
+    
+    printf("\nDigite uma string: ");
+    fgets(string, 100, stdin);
+    
+    for(i = 0; string[i] != '\0'; i++) 
+    {       
+    
+        if (string[i] >= 65 && string[i] <= 90)
+        {
+            maiusculas = maiusculas  + 1;
+            
+        }
+        else if (string[i] >= 97 && string[i] <= 122)
+            {
+                minusculas = minusculas + 1;
+            }
+    }
+    
+    if (maiusculas > 0 && minusculas ==0)
+    {
+        printf("\nO texto está todo em letras MAIUSCULAS");
+    }  
+        else if (minusculas > 0 && maiusculas ==0)
+            {
+            printf("\nO texto está todo em letras MINUSCULAS");
+            }
+                else 
+                {
+                    printf("\nO texto é IBRIDO");
+                }
+    return 0;
+}
