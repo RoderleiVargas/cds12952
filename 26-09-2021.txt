@@ -1,0 +1,80 @@
+
+// Faça um programa para ler a nota da prova de 5 alunos e armazene num vetor, calcule e imprima a media geral. ´
+
+#include <stdio.h>
+
+int main()
+{
+    
+    int i, nota[5], media=0;
+    
+    for (i=0; i <=4; i++)
+    {
+        printf("\nDigite a nota do aluno: ");
+         scanf("%d", &nota[i]);
+         media = media + nota[i];
+    
+    }
+    media = media /5;
+    printf("\nA media é: %d", media);
+    return 0;
+}
+
+// Crie um programa que le 5 valores inteiros e, em seguida, mostre na tela os valores lidos na ordem inversa.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+   
+   int i, numeros[5];
+   
+   for (i=0; i < 5; i++)
+   {
+       printf("\nDigite o nro:");
+       scanf("%d", &numeros[i]);
+   }
+
+   printf("Resultado \n");
+   
+   for (i=4; i>=0; i--)
+   {
+       printf("%d\n", numeros[i]);
+   }
+
+    return 0;
+}
+
+// Escreva um programa que leia 10 numeros inteiros e os armazene em um vetor. Imprima o vetor, o maior elemento e a posic¸ao que ele se encontra
+
+#include <stdio.h>
+
+int main()
+{
+  int i, numero[5], posicao=0, maiorelemento=0;
+  
+  for (i = 0; i <=4; i++) 
+  {
+    printf("\nDigite o nro %d: ", i+1);
+    scanf("%d", &numero[i]);
+  }
+  
+  printf("O vetor é: ");
+  
+  for (i = 0; i <=4; i++) 
+  {  
+     printf("%d ", numero[i]);
+     
+     if (numero[i] >= maiorelemento)
+        {
+        maiorelemento = numero[i];
+        posicao = i;
+        }
+  } 
+  
+  printf("\nO maior elemento é %d, na posicao %d", maiorelemento, posicao+1);
+  
+    return 0;
+}
