@@ -1,0 +1,161 @@
+Aspas Duplas "B" quando usuado "" ele coloca o enter no final 0\
+
+Aspas Simples 'B'
+	char x='B'
+	char x[2] = "B"
+
+
+
+------------------- EXERCICIO 3
+
+Escreva um programa em C que leia uma string do usuário e diga se essa string está toda em letras maiúsculas ou não. Para esse exercício, considere uma string toda em maiúsculo quando não há nela letras minúsculas, ou seja, considere números, espaços e outros caracteres como letras maiúsculas.
+
+**Dica:** Lembre-se da tabela ASCII.
+
+Exemplo do programa executando:
+
+```
+Digite uma string: Teste
+
+A string NÃO está toda em letras maiúsculas.
+```
+
+```
+Digite uma string: TESTE2
+
+A string ESTÁ toda em letras maiúsculas.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char string[100];
+    int i;
+    
+    printf("Digite uma string: ");
+    fgets(string, 100, stdin); // stdin significa entrada padrão std = standanrd = in = imput
+    
+    for(i=0; i < strlen(string); i++)
+        if (string[i] >= 'a' && string[i] <= 'z')
+            {
+                printf("\nA string NÃO está toda em letras MAIUSCULAS");
+                return 0;
+            }
+    
+    printf("\nA string ESTA toda em letras minusculas");
+    return 0;
+}
+
+
+Mesmo exemplo do anterior, mas agora entra num loop até o usuário pedir para SAIR
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char string[100]="";
+    int i;
+    
+    while(1)
+    {
+        printf("\nDigite uma string ou SAIR para finalizar o programa: ");
+        fgets(string, 100, stdin); // stdin significa entrada padrão std = standanrd = in = imput
+
+        if (strcmp(string, "SAIR\n") == 0)
+           return 0;
+        
+        for(i=0; i < strlen(string); i++)
+            if (string[i] >= 'a' && string[i] <= 'z')
+                {
+                    printf("\nA string NÃO está toda em letras MAIUSCULAS");
+                    break;
+                }
+            else
+                {
+                    printf("\nA string ESTA toda em letras minusculas");
+                    break;
+                }
+        
+    }
+   
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* Escreva um programa em C, que receba uma string qualquer e remova todos os caracteres que não se encontram repetidos e depois exibe o resultado na tela. 
+Se não houver nenhum caracter repetido na string, exibe uma string em branco.
+
+Exemplo do programa executando:
+Digite uma string: Rafael
+Resultado: aa */
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char string[100];
+	char resultado[100] = "";
+	int i, j, k = 0;
+	printf("Digite uma string: ");
+	fgets(string, 100, stdin);
+
+	for(i = 0; i < strlen(string); i++)
+	{
+		for(j = 0; j < strlen(string); j++)
+		{
+			if(i != j && string[i] == string[j])
+			{
+				resultado[k] = string[i];
+				k++;
+				break;
+			}
+		}
+	}
+
+	printf("Resultado: %s\n", resultado);
+
+	return 0;
+}
+
+Trabalhando com MATRIZES
+
+Exemplo 1
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    float notas[10], media soma=0;
+    int provas, i;
+    
+    printf("CALCULADORA DE NOTAS\n");
+    
+    printf("Digite o nro de provas:");
+    
+    scanf("%d", &provas);
+    
+    for (i=0; i< provas; i++)
+    {
+        printf("Nota %d;", i+1);
+        scanf("%f", &notas[i]);
+    }
+
+    printf("\n\nPROVAS");
+    
+    for (i=0; i < provas; i++)
+        printf("Prova %d; %2.2f\n", i+1, notas[i]);
+        soma += notas[I];
+    
+    printf("\n\nMEIDA");
+    
+    return 0;
+}
+
+
