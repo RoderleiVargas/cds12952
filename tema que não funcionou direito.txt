@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+int main()
+{
+   int valores[3][3], l,c;
+   
+   for (l = 0; l <= 2; l++) 
+   {
+        printf("\nDigite o valor da Linha %d\n", l+1);
+            for (c = 0; c <= 2; c++) 
+            {
+                printf("\nColuna %d ", c+1);
+                scanf("%d", &valores[l][c]);
+            }
+   }
+
+   for (l = 2; l = 0; l--) 
+   {
+        for (c = 2; c = 0; c--) 
+        {
+            printf("%d ",valores[l][c]);
+        }
+   }
+
+    return 0;
+}
