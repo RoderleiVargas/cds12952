@@ -1,0 +1,230 @@
+29-09-2021
+
+#include <stdio.h>
+
+int main()
+{
+   int valores[3][3], l,c;
+   
+   for (l = 0; l <= 2; l++) 
+   {
+        printf("\nDigite o valor da Linha %d\n", l+1);
+            for (c = 0; c <= 2; c++) 
+            {
+                printf("\nColuna %d ", c+1);
+                scanf("%d", &valores[l][c]);
+            }
+   }
+
+   for (l = 2; l >= 0; l--) 
+   {
+        for (c = 2; c >= 0; c--) 
+        {
+            printf("%d ",valores[l][c]);
+        }
+   }
+
+
+#include <stdio.h>
+
+int main()
+{
+
+float notas[2][3] = {6.7,8,9,6,7,9};
+int linha, coluna;
+
+for (linha =0; linha <2; linha++)
+{
+    printf("\t");
+    for (coluna =0; coluna < 3; coluna++)
+    {
+        printf(" %2.2f", notas[linha][coluna]);
+    }
+    printf("\n");
+    
+}
+
+for (linha = 1; linha >=0; linha--)
+{
+    printf("\t");
+    for (coluna = 2; coluna >= 0; coluna--)
+    {
+        printf(" %2.2f", notas[linha][coluna]);
+    }
+    printf("\n");
+    
+}
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+
+char nomes[3][100] = {"Rafael", "Leonardo", "Joao"};
+int i;
+
+for(i=0; i<=2; i++)
+{
+    printf("\t\n");
+    printf("%s\n", nomes[i]);}
+
+   return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+  int matriz[3][3] = {
+		10, 20, 25,
+		30, 40, 45,
+		50, 60, 65 };
+		
+   int l,c;
+   
+   for (l = 0; l <= 2; l++) 
+   {
+        for (c = 0; c <= 2; c++) 
+            {
+            printf(" %d ", matriz[l][c]);
+            
+            }
+   }
+
+    return 0;
+}
+
+EXERCICIO 1
+
+Dada a seguinte matriz:
+
+```c
+int matriz[3][3] = {
+		10, 20, 25,
+		30, 40, 45,
+		50, 60, 65
+};
+```
+
+Escreva um programa em C que imprima a diagonal primária e depois imprima a diagonal secundária.
+
+Exemplo do programa executando:
+
+```
+Diagonal Principal: 10, 40, 65
+Diagonal Secundária: 25, 40, 50
+
+#include <stdio.h>
+int main()
+{
+  int matriz[3][3] = {
+		10, 20, 25,
+		30, 40, 45,
+		50, 60, 65 };
+		
+   int l,c;
+   
+   for (l = 0, c = 0; l <= 2; l++, c++) 
+   {
+        {
+             printf("matriz [%d] [%d] = %d\n", l, c, matriz[l][c]);
+        
+        }
+   }
+    printf("\n");
+    
+    for (l = 0, c = 2; l <= 2; l++, c--) 
+    {
+        {
+             printf("matriz [%d] [%d] = %d\n", l, c, matriz[l][c]);
+        }
+   }
+   
+    return 0;
+}
+
+EXERCICIO 2
+
+Dada a seguinte matriz:
+
+```c
+int matriz[3][3] = {
+		10, 20, 25,
+		30, 40, 45,
+		50, 60, 65
+};
+```
+
+Imprima todos os elementos exceto a diagona principal.
+
+#include <stdio.h>
+
+int main()
+{
+  int matriz[3][3] = {
+		10, 20, 25,
+		30, 40, 45,
+		50, 60, 65 
+    };
+		
+   int l,c;
+   
+    for (l = 0 ; l < 3; l++) 
+    {
+        for (c = 0; c < 3; c++) 
+        {
+            if (l != c)
+                {
+                    printf("matriz [%d] [%d] = %d\n", l, c, matriz[l][c]);
+                }
+        }
+                
+    }
+
+EXERCICIO 3
+
+Dado o seguinte vetor:
+
+int vetor[5] = {3, 5, 23, 28, 11}
+
+escreva um programa que percorra todos os elementos desse vetor e exiba na tela qual o maior número, o menor número e a média aritmética desses números.
+
+Exemplo do programa executando:
+
+```
+RESULTADO:
+Maior número: 28
+Menor número: 3
+Média aritmética: 14
+
+#include <stdio.h>
+
+int main()
+{
+
+int vetor[5] = {3, 5, 23, 28, 11};
+int i=0, maior = vetor[0], menor=vetor[0], soma=0;
+   
+while (i < 5)
+{
+    if (vetor[i] < menor)
+        menor = vetor[i];
+
+    if (vetor[i] > maior)
+        maior = vetor[i];
+    
+    soma += vetor[i];
+   
+   i++;
+}
+
+printf("\nMenor = %d", menor);
+printf("\nMaior = %d", maior);
+printf("\nMédia = %d\n", soma / 5);
+
+return 0;
+}
+
