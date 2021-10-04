@@ -1,0 +1,113 @@
+// Leia uma matriz 4 x 4, conte e escreva quantos valores maiores que 10 ela possui
+
+#include <stdio.h>
+
+int main()
+{
+
+int matriz[4][4], l,c, maiorque10;
+
+for (l = 0; l < 4; l++)
+{
+    for (c = 0; c < 4; c++)
+    {
+        printf("Digite o nro da Linha %d / Coluna %d ", l+1, c+1);
+        scanf("%d", &matriz[l][c]);
+    }
+    printf("\n");
+}
+
+for (l = 0; l < 4; l++)
+{
+    for (c = 0; c < 4; c++)
+    {
+        if (matriz[l][c] > 10)
+        {
+            printf("\nO nro digitado na Linha %d / Coluna %d é maior que 10: ", l+1, c+1);
+            printf("%d", matriz[l][c]);
+            maiorque10 = maiorque10 + 1;
+        }
+    }
+}
+printf("\nExistem na matriz %d, números maiores que 10", maiorque10);
+
+    return 0;
+}
+
+// Declare uma matriz 5 x 5. Preencha com 1 a diagonal principal e com 0 os demais elementos. Escreva ao final a matriz obtida.
+
+#include <stdio.h>
+
+int main()
+{
+
+int matriz[5][5], l,c, lixo;
+
+for (l = 0; l < 5; l++)
+{
+    for (c = 0; c < 5; c++)
+    {
+        if (c ==l)
+        {
+            matriz[l][c] = 1;
+        }
+        else
+        {
+            matriz[l][c] = 0;
+        }
+    }
+}
+
+for (l = 0; l < 5; l++)
+{
+    for (c = 0; c < 5; c++)
+    {
+        printf ("%d", matriz[l][c]);
+    }
+    printf("\n");
+}
+    return 0;
+}
+
+
+// Leia uma matriz 4 x 4, imprima a matriz e retorne a localizacao (linha e a coluna) do maior valor.
+
+#include <stdio.h>
+
+int main()
+{
+
+int matriz[4][4], l, c, maiorvalor=0,lmaiorvalor=0,cmaiorvalor=0;
+
+for (l = 0; l < 4; l++)
+{
+    for (c = 0; c < 4; c++)
+    {
+        printf("Digite o valor da Linha %d, Coluna %d ", l+1, c+1);
+        scanf("%d", &matriz[l][c]);
+    }
+    printf("\n");
+}
+
+for (l = 0; l < 4; l++)
+{
+    for (c = 0; c < 4; c++)
+    {
+        printf("O valor da Linha %d, Coluna %d é:  %d", l+1, c+1, matriz[l][c]);
+        printf("\n");
+        
+        if (maiorvalor < matriz[l][c])
+        {
+            maiorvalor = matriz[l][c];
+            lmaiorvalor = l;
+            cmaiorvalor = c;
+        }
+    }
+    printf("\n");
+}
+
+printf("O maior valor é %d ", maiorvalor);
+printf("E está localizado na Linha %d, Coluna %d", lmaiorvalor+1, cmaiorvalor+1);
+
+return 0;
+}
