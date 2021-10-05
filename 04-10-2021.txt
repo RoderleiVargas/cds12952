@@ -1,0 +1,187 @@
+Exercicio com FUNÇÕES
+
+/* Escreve uma função que receba um caractere e verifique se esse caractere é um dígito ou não. 
+Se for, deve retornar 1, caso contrário deve retornar 0.
+
+Exemplo:
+
+minha_funcao('f') -> 0 // f não é um dígito
+minha_funcao('0') -> 1 // 0 é um dígito
+*/
+
+#include <stdio.h>
+
+int edigito(int caracter)
+{
+    if (caracter >= 0 && caracter <= 9)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int caracter;
+    printf("\nDigite UM caracter: ");
+    scanf("%d", &caracter);
+    if (edigito(caracter) == 1)
+        printf(" \nO nro digitado é um digito");
+    else
+        printf(" \nO nro digitado NÃO é um digito");
+    return 0;
+}
+
+
+/* Escreva uma função que verifique se dois números são divisíveis. 
+A função deverá receber dois números inteiros, a e b, como parâmetros. 
+Se o resto da divisão por a e b for 0, significando que os números são divisíveis
+deve retornar 1, caso contrário retorna 0.
+
+Exemplo:
+
+minha_funcao(9, 3) -> 1 // 9 é divisível por 3.
+minha_funcao(10, 3) -> 0 // 10 não é divisível por 3
+
+
+OBS: Você deve escolher um nome para a sua função que faça sentido.
+*/
+
+#include <stdio.h>
+
+int edivisivel(int a, int b)
+{
+    int resto;
+    resto = a % b;
+    if (resto == 0)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    printf("\n\%d",edivisivel(17,3));
+    return 0;
+}
+
+/*Escreva uma função que receba um caractere como parâmetro e retorne 1 caso seja uma vogal e 0 caso não seja.
+
+Exemplo:
+
+minha_funcao('g') -> 0 // g não é uma vogal
+minha_funcao('a') -> 1 // a é uma vogal
+
+*/
+#include <stdio.h>
+
+int tipocaracter(char caracter)
+{
+    if (caracter == 'a' || caracter == 'A' || caracter == 'e' || caracter == 'E' || caracter == 'i' || caracter == 'I' || caracter == 'o' || caracter == 'O' || caracter == 'u' || caracter == 'U')
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+
+    char caracter;
+    printf("\nDigite UM caracter: ");
+    scanf("%c", &caracter);
+    printf("\n\%d",tipocaracter(caracter));
+    return 0;
+}
+
+
+
+/* Escreve uma função que receba um caractere e verifique se esse caractere é um dígito ou não. 
+Se for, deve retornar 1, caso contrário deve retornar 0.
+
+Exemplo:
+
+minha_funcao('f') -> 0 // f não é um dígito
+minha_funcao('0') -> 1 // 0 é um dígito
+*/
+
+#include <stdio.h>
+
+int edigito(int caracter)
+{
+    if (caracter >= 0 && caracter <= 9)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int caracter;
+    printf("\nDigite UM caracter: ");
+    scanf("%d", &caracter);
+    if (edigito(caracter) == 1)
+        printf(" \nO nro digitado é um digito");
+    else
+        printf(" \nO nro digitado NÃO é um digito");
+    return 0;
+}
+
+
+/* Escreve uma função que receba um caractere e verifique se esse caractere é um dígito ou não. 
+Se for, deve retornar 1, caso contrário deve retornar 0.
+
+Exemplo:
+
+minha_funcao('f') -> 0 // f não é um dígito
+minha_funcao('0') -> 1 // 0 é um dígito
+*/
+
+#include <stdio.h>
+#include <string.h>
+
+int edigito(int caracter)
+{
+    if (caracter >= 0 && caracter <= 9)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    char caracter[100];
+    printf("\nDigite UM caracter: ");
+    scanf("%s", caracter);
+    if (strlen(caracter) > 1)
+        {
+            printf("Leonardo é pra digitar UM caracter, programa se autodestruirá, ehehe");
+            return 0;
+        }
+    if (edigito(caracter[0]) == 1)
+        printf(" \nO nro digitado é um digito");
+    else
+        printf(" \nO nro digitado NÃO é um digito");
+    return 0;
+}
+
+
+----------------- TEMA DE CASA
+
+/*Escreva uma função que receba dois números inteiros, `a` e `b`, e retorne `a` elevado à potência de `b`. Exemplo:
+
+minha_funcao(2, 3) -> 8 // 2 * 2 * 2 = 8
+minha_funcao(2, 4) -> 16 // 2 * 2 * 2 * 2 = 16
+minha_funcao(3, 2) -> 9 // 3 * 3 = 9
+*/ 
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    printf("\nDigite o primeiro número: ");
+    scanf("%d", &a);
+    printf("\nDigite o segundo número: ");
+    scanf("%d", &b);
+    
+    return 0;
+}
